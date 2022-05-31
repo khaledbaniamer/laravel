@@ -21,3 +21,5 @@ Route::get('/register', function () {
     return view('registration');
 });
 
+Route::get('/post', 'App\Http\Controllers\PostController@index'); 
+
