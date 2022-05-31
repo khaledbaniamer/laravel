@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+input , button{
+    height: 35px;
+    width: 350px;
+    border: .25px solid gray;
+    border-radius: 20px;
+    margin: 13px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
+    justify-items: center;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    margin: auto;
+}
+div{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#register{
+    background-color: rgba(0, 0, 255, 0.655);
+    color: white;
+    box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
+    cursor: pointer;
+}
+#sing{
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
+    cursor: pointer;
+}
+#google{
+    background-color: rgb(255, 70, 70);
+    color: white;
+    box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
+    cursor: pointer;
+}
+#facebook{
+    background-color: rgba(7, 7, 84, 0.744);
+    color: white;
+    box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
+    cursor: pointer;
+}
+
