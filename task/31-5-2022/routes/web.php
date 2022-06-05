@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register', function () {
-    return view('registration');
-});
+Route::view('/register' , 'registration');
+Route::post('register' , [UserController::class , 'add_user']);
+Route::get('show' , [UserController::class , 'show_data']);
+Route::get('user/{id}', [UserController::class , 'show_single_product']);
 
-Route::get('/post', 'App\Http\Controllers\PostController@index'); 
+Route::post('user/{id}' , [UserController::class , 'edit_user']);
+
+Route::get('delete/{id}' , [UserController::class , 'delete_user']);
+
+
 

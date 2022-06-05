@@ -12,12 +12,13 @@ input , button{
 }
 
 form{
+    position: relative;
+    top: 100px;
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 5px 5px rgb(211, 209, 209)  ;
     justify-items: center;
     width: 500px;
-    height: 600px;
     border-radius: 20px;
     margin: auto;
 }
@@ -51,3 +52,15 @@ h2{
     cursor: pointer;
 }
 
+.danger{
+    color: rgba(255, 0, 0, 0.619);
+}
+
+.success{
+    color: rgba(0, 128, 0, 0.591);
+    font-size: 40px;
+}
+label{
+    float: left;
+    padding-left: 10px;
+}

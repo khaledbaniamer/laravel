@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/registratio.css" rel="stylesheet">
-    <title>Register Form</title>
-
-
+    <link rel="stylesheet" href="/css/registratio.css">
+    <title>Edite</title>
 </head>
-<body >
+<body>
+    <h1></h1>
+    
     @if ($message = Session::get('success'))
     <div>
         <div class="success" >{{ $message }}</div>
     </div> 
     @endif
-    <form action="update" method="POST" id="form">
+    <form action="update" method="POST" id="form" >
         @csrf
-        <h2>Register</h2>
+        <input type="hidden" value="{{$single_product->id}}" name="id">
+        <h2>Update User Infromation</h2>
         <div>
-            <input type="text" name="username"  id="" class="input" placeholder="Username">
+            <label>Username</label><br>
+            <input type="text" name="username"  class="input" value="{{$single_product->user_name}}">
         </div> 
 
         <div>
@@ -29,7 +31,8 @@
         </div> 
         
         <div>
-            <input type="email" id="" name="email"  class="input" placeholder="Email Address">
+            <label>Email</label><br>
+            <input type="email"  name="email"  class="input" value="{{$single_product->email}}">
         </div>
 
         <div>
@@ -38,7 +41,8 @@
             @enderror
         </div> 
         <div>
-             <input type="password" id="" name="password" class="input" placeholder="Password">
+            <label>Password</label><br>
+             <input type="password"  name="password" class="input" value="{{$single_product->password}}">
         </div>
 
         <div>
@@ -48,7 +52,8 @@
         </div> 
 
         <div>
-            <input type="password"  id="" name="confirm_password"  class="input" placeholder="Confirm Password">
+            <label>Confirm Password</label><br>
+            <input type="password"   name="confirm_password"  class="input" value="{{$single_product->password}}">
         </div>
 
         <div>
@@ -64,21 +69,11 @@
         @endif
         
         <div>
-            <button type="submit" id="register">REGISTER</button>
+            <button type="submit" id="register">UPDATE</button>
         </div>
 
-         <div>
-            <button id="sing">Sign in</button>
-        </div>
-
-        <div>
-            <button id="google">SIGN UP WITH GOOGLE</button>
-        </div>
-
-        <div>
-             <button id="facebook">SIGN UP WITH FACEBOOK</button>
-        </div>
 
     </form>
+
 </body>
 </html>
