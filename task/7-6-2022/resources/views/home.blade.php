@@ -1,0 +1,1 @@
+<h1>Welcome {{session('name')}} to our website</h1>
