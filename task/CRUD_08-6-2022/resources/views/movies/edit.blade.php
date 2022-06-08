@@ -33,10 +33,10 @@
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Image</label>
-            <img src="{{asset('storage/movies_image/'.$movie->movie_image) }}" alt="" width="100px" height="100px">
+            <img src="{{asset('storage/movies_image/'.$movie->movie_image)}}" alt="" width="100px" height="100px">
         </div>
-
-        <button type="submit" class="btn btn-primary mb-5 mt-3">ADD</button>
+        <input type="hidden" name="hidden_image" value="{{$movie->movie_image}}">
+        <button type="submit" class="btn btn-primary mb-5 mt-3">UPDATE</button>
     </form>
 </div>  
 @endsection

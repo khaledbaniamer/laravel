@@ -9,11 +9,14 @@
 </head>
 <body>
     <ul class="nav">
+      <li class="nav-item">
+        <h3 class="nav-link active disabled"  aria-current="page" href="/home">Netflix</h3>
+      </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active p-3" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/add">Add Movie</a>
+          <a class="nav-link p-3" href="/add">Add Movie</a>
         </li>
       </ul>
 

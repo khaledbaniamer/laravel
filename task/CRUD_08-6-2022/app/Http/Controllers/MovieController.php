@@ -21,7 +21,7 @@ class MovieController extends Controller
             'file'=>'required'
             
         ]);
-        $image = $request->file('file')->storeAs('movies_image' , $request->file->getClientOriginalName());
+        $image = $request->file('file')->storeAs('public/movies_image' , $request->file->getClientOriginalName());
         $movie = new Movie();
         $movie->movie_name = $request->name;
         $movie->movie_description = $request->description ;
@@ -44,6 +44,7 @@ class MovieController extends Controller
     public function update_movie(Request $request)
     {
         $id = $request->id;
+        $hidden_image = $request->hidden_image;
         $movie = Movie::find($id);
 
         $request->validate([
@@ -53,13 +54,20 @@ class MovieController extends Controller
             
             
         ]);
-        $image = $request->file('file')->storeAs('movies_image' , $request->file->getClientOriginalName());
+        if($request->file !=null)
+        {
+
+            $image = $request->file('file')->storeAs('public/movies_image' , $request->file->getClientOriginalName());
+        }
         $movie->movie_name = $request->name;
         $movie->movie_description = $request->description ;
         $movie->movie_gener = $request->year;
-        if($image){
+        if(isset($image)){
 
             $movie->movie_image = $request->file->getClientOriginalName();
+        }else
+        {
+            $movie->movie_image = $hidden_image;
         }
 
         $movie->save();

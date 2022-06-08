@@ -25,12 +25,15 @@
             @foreach ($movies as $movie)
                 
             <tr>
-              <th scope="row">{{$movie->id}}</th>
-              <td class="text-center">{{$movie->movie_name}} </td>
-              <td class="text-center">{{$movie->movie_gener}}</td>
-              <td class="text-center">{{$movie->movie_image}}</td>
+              <th class="text-center" style="vertical-align: middle">{{$movie->id}}</th>
+              <td class="text-center" style="vertical-align: middle">{{$movie->movie_name}} </td>
+              <td class="text-center" style="vertical-align: middle">{{$movie->movie_gener}}</td>
+              <td class="text-center" style="vertical-align: middle">
+                <img src="{{asset('storage/movies_image/'.$movie->movie_image)}}" alt="" width="100px" height="100px">
+                
+              </td>
       
-              <td class="text-center">
+              <td class="text-center" style="vertical-align: middle">
                   <a class="btn btn-primary mx-2" href="/edit/{{$movie->id}}">Update</a>
                   <a class="btn btn-danger mx-2" href="delete/{{$movie->id}}">Delete</a>
                   <a class="btn btn-secondary mx-2" href="/view/{{$movie->id}}">View</a>

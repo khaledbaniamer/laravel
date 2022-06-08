@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="card mb-5 mx-5 mt-5" style="max-width: 80% ">
+<div class="card mb-5 mx-5 mt-5" style="max-width:80% ">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="{{asset('storage/movies_image/'.$movie->movie_image)}}" class="img-fluid rounded-start" alt="...">
@@ -14,7 +14,7 @@
           <label style="color: blue">Movie Description</label>
           <p class="card-text" style="height: 200px">{{$movie->movie_description}}</p> <hr>
           <label style="color: blue">Year Genrate</label>
-          <p class="card-text"><small class="text-muted">{{$movie->movie_gener}}</small></p>
+          <p class="card-text"  style="height: 100px"><small class="text-muted">{{$movie->movie_gener}}</small></p>
         </div>
       </div>
     </div>
